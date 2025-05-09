@@ -1,0 +1,56 @@
+# C'est un workflow de base qui est déclenché manuellement
+
+name: Déploiement Indev vers itch.io
+
+on:
+  # S'exécute lors des pushs ciblant la branche par défaut
+  push:
+    branches: ["main"]
+  # Permet d'exécuter ce workflow manuellement depuis l'onglet Actions
+  workflow_dispatch:
+
+# Un workflow est constitué d'un ou plusieurs jobs qui peuvent s'exécuter séquentiellement ou en parallèle
+jobs:
+  # Ce workflow contient un seul job appelé "deploy"
+  deploy:
+   # Always use ubuntu-latest for this action
+    runs-on: ubuntu-latest
+    # Add permission for release creation. Can be made narrower according to your needs
+    permissions: write-all
+    # Job name, can be anything
+    name: Export Game
+    steps:
+      # Always include the checkout step so that 
+      # your project is available for Godot to export
+    - name: checkout
+      uses: actions/checkout@v4
+      
+    - name: Inject Build Info
+      run: |
+        COMMIT_HASH=$(git rev-parse --short HEAD)
+        BUILD_DATE=$(date -u +"%Y-%m-%d %H:%M UTC")
+        echo "Commit: $COMMIT_HASH | Built: $BUILD_DATE"
+        echo "Commit: $COMMIT_HASH | Built: $BUILD_DATE" > build_info.txt
+
+  
+    - name: export game
+      id: export
+      # Use latest version (see releases for all versions)
+      uses: firebelley/godot-export@v6.0.0
+      with:
+        # Defining all the required inputs
+        godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip
+        godot_export_templates_download_url: https://github.com/godotengine/godot-builds/releases/download/4.3-stable/Godot_v4.3-stable_export_templates.tpz
+        relative_project_path: ./
+        relative_export_path : bin/
+        archive_output: false
+
+
+    - name: Push to Itch.io
+      uses: KikimoraGames/itch-publish@v0.0.3
+      with:
+        butlerApiKey: ${{secrets.BUTLER_API_KEY}}
+        gameData: bin/
+        itchUsername: ${{vars.ITCH_USERNAME}}
+        itchGameId: ${{ vars.ITCH_GAME_ID }}
+        buildChannel: html5

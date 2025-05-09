@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://jkhcooyo3myv"]
+
+[ext_resource type="Script" path="res://src/states/state_machine.gd" id="1_t2lyj"]
+[ext_resource type="Script" path="res://src/states/loading.gd" id="2_g37j7"]
+
+[node name="GameManager" type="Node"]
+
+[node name="StateMachine" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_t2lyj")
+
+[node name="Loading" type="Node" parent="StateMachine"]
+script = ExtResource("2_g37j7")
