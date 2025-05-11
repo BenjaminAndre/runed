@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://jkhcooyo3myv"]
+[gd_scene load_steps=6 format=3 uid="uid://jkhcooyo3myv"]
 
 [ext_resource type="Script" path="res://src/states/state_machine.gd" id="1_t2lyj"]
 [ext_resource type="Script" path="res://src/states/loading.gd" id="2_g37j7"]
+[ext_resource type="PackedScene" uid="uid://flspxd7m760h" path="res://scn/game/card.tscn" id="3_l06qa"]
+[ext_resource type="Script" path="res://src/card_manager.gd" id="3_wbjlq"]
+
+[sub_resource type="Curve" id="Curve_3asv7"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="GameManager" type="Node"]
 
@@ -11,3 +17,13 @@ script = ExtResource("1_t2lyj")
 
 [node name="Loading" type="Node" parent="StateMachine"]
 script = ExtResource("2_g37j7")
+
+[node name="GameWorld" type="Node2D" parent="."]
+
+[node name="CardManager" type="Node2D" parent="GameWorld"]
+position = Vector2(2, 0)
+script = ExtResource("3_wbjlq")
+easing = SubResource("Curve_3asv7")
+
+[node name="Card" parent="GameWorld/CardManager" instance=ExtResource("3_l06qa")]
+position = Vector2(561, 509)
