@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://flspxd7m760h"]
+[gd_scene load_steps=4 format=3 uid="uid://flspxd7m760h"]
 
-[ext_resource type="Texture2D" uid="uid://dv8vs1bmi5emg" path="res://res/cards/godot_wild_card_back_logo_only.svg" id="1_8culf"]
+[ext_resource type="Script" path="res://src/card.gd" id="1_w4auh"]
+[ext_resource type="Texture2D" uid="uid://wavy1wcfaw3o" path="res://res/cards/ocean.png" id="2_3svjb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3daw0"]
-size = Vector2(58, 78)
+size = Vector2(219, 303)
 
 [node name="Card" type="Node2D"]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_w4auh")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -13,6 +16,4 @@ size = Vector2(58, 78)
 shape = SubResource("RectangleShape2D_3daw0")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-4.76837e-07, 0.499998)
-scale = Vector2(0.0674419, 0.0639535)
-texture = ExtResource("1_8culf")
+texture = ExtResource("2_3svjb")

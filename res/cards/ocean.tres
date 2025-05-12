@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://b08dshpy4w4n5"]
+
+[ext_resource type="Script" path="res://src/res/card.gd" id="1_2tmqy"]
+[ext_resource type="Texture2D" uid="uid://wavy1wcfaw3o" path="res://res/cards/ocean.png" id="2_pcg7s"]
+
+[resource]
+script = ExtResource("1_2tmqy")
+name = "Ocean"
+sprite = ExtResource("2_pcg7s")
