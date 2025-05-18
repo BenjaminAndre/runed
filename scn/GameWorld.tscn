@@ -1,0 +1,105 @@
+[gd_scene load_steps=14 format=3 uid="uid://b5okkk0ofmq8e"]
+
+[ext_resource type="PackedScene" uid="uid://b7cuxughbbbg2" path="res://res/ext/island.blend" id="1_owfvh"]
+[ext_resource type="ArrayMesh" uid="uid://lau7klpfl1cm" path="res://res/lib/ColdBiom/Crowns/TreeCrown2.obj" id="2_jqr7x"]
+[ext_resource type="ArrayMesh" uid="uid://dafa1vlvlkh7c" path="res://res/lib/ColdBiom/Crowns/TreeCrownSnowy.obj" id="3_w7jd7"]
+[ext_resource type="ArrayMesh" uid="uid://csbnjc4jltfph" path="res://res/lib/ColdBiom/Crowns/TreeCrownSnow.obj" id="4_hx0fv"]
+[ext_resource type="ArrayMesh" uid="uid://oj782e6ltw54" path="res://res/lib/ColdBiom/Crowns/TreeCrown.obj" id="5_75tpt"]
+[ext_resource type="ArrayMesh" uid="uid://ds21pwhlaqgvs" path="res://res/lib/ColdBiom/Crowns/TreeCrown2Snowy.obj" id="6_b6ohh"]
+[ext_resource type="ArrayMesh" uid="uid://c7qbxf77al1em" path="res://res/lib/ColdBiom/Stones/DecoratedStone2.obj" id="7_lm3un"]
+[ext_resource type="ArrayMesh" uid="uid://d2tl3sdb4vmtk" path="res://res/lib/ColdBiom/Stones/MediumStone.obj" id="8_xd38j"]
+[ext_resource type="ArrayMesh" uid="uid://csuiwh0avixs1" path="res://res/lib/ColdBiom/Stones/MediumStoneSnow.obj" id="9_6fl5v"]
+[ext_resource type="ArrayMesh" uid="uid://cfako2g77sohk" path="res://res/lib/ColdBiom/Stones/RuneStone5.obj" id="10_qsvhq"]
+[ext_resource type="ArrayMesh" uid="uid://bddow83otolok" path="res://res/lib/ColdBiom/Stones/RuneStone4.obj" id="11_451nt"]
+[ext_resource type="ArrayMesh" uid="uid://82vs22222tv6" path="res://res/lib/ColdBiom/Stones/RuneStone3.obj" id="12_aul76"]
+[ext_resource type="ArrayMesh" uid="uid://dvambxr17grw0" path="res://res/lib/ColdBiom/Snowman/Snowman.obj" id="13_1thdc"]
+
+[node name="GameWorld" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.114937, 0.993373, 0, -0.993373, 0.114937, 0, 4.39562, 0.824827)
+current = true
+
+[node name="island" parent="." instance=ExtResource("1_owfvh")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 0, 3, -14)
+
+[node name="Decoration" type="Node3D" parent="."]
+process_mode = 4
+physics_interpolation_mode = 2
+
+[node name="TreeCrown2" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.23221, 0, 0.912445)
+mesh = ExtResource("2_jqr7x")
+skeleton = NodePath("../..")
+
+[node name="TreeCrownSnowy" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.66057, 0, -3.25075)
+mesh = ExtResource("3_w7jd7")
+skeleton = NodePath("../..")
+
+[node name="TreeCrownSnow" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.53625, 0, 0.581222)
+mesh = ExtResource("4_hx0fv")
+skeleton = NodePath("../..")
+
+[node name="TreeCrown" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38628, 0, 3.38369)
+mesh = ExtResource("5_75tpt")
+skeleton = NodePath("../..")
+
+[node name="TreeCrown2Snowy" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.78874, 0, 3.42616)
+mesh = ExtResource("6_b6ohh")
+skeleton = NodePath("../..")
+
+[node name="TreeCrownSnow2" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82889, 0, -3.10697)
+mesh = ExtResource("4_hx0fv")
+skeleton = NodePath("../..")
+
+[node name="DecoratedStone2" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10345, 0, 3.17215)
+mesh = ExtResource("7_lm3un")
+skeleton = NodePath("../..")
+
+[node name="MediumStone" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.95595, 0, -1.83329)
+mesh = ExtResource("8_xd38j")
+skeleton = NodePath("../..")
+
+[node name="MediumStoneSnow" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.797846, 0, -3.50408)
+mesh = ExtResource("9_6fl5v")
+skeleton = NodePath("../..")
+
+[node name="MediumStoneSnow2" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.43845, 0, -1.16397)
+mesh = ExtResource("9_6fl5v")
+skeleton = NodePath("../..")
+
+[node name="MediumStoneSnow3" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.921782, 0, 3.23586)
+mesh = ExtResource("9_6fl5v")
+skeleton = NodePath("../..")
+
+[node name="RuneStone5" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13289, 0, 3.02784)
+mesh = ExtResource("10_qsvhq")
+skeleton = NodePath("../..")
+
+[node name="RuneStone4" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0719, 0, -2.98267)
+mesh = ExtResource("11_451nt")
+skeleton = NodePath("../..")
+
+[node name="RuneStone3" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -4.96851, 0, 1.98316)
+mesh = ExtResource("12_aul76")
+skeleton = NodePath("../..")
+
+[node name="Snowman" type="MeshInstance3D" parent="Decoration"]
+transform = Transform3D(-0.677582, 0, -0.735447, 0, 1, 0, 0.735447, 0, -0.677582, 4.30021, 0, 2.84896)
+mesh = ExtResource("13_1thdc")
+skeleton = NodePath("../..")

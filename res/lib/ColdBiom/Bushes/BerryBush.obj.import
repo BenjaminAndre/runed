@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cd3hwnso7qfvq"
+path="res://.godot/imported/BerryBush.obj-42d8ef78b765fe0b06e9cb8f40823b7c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BerryBush.obj-42d8ef78b765fe0b06e9cb8f40823b7c.mesh"]
+
+source_file="res://res/lib/ColdBiom/Bushes/BerryBush.obj"
+dest_files=["res://.godot/imported/BerryBush.obj-42d8ef78b765fe0b06e9cb8f40823b7c.mesh", "res://.godot/imported/BerryBush.obj-42d8ef78b765fe0b06e9cb8f40823b7c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://plcrtv4fm45j"
+path="res://.godot/imported/TreeCrown2Snow.obj-36c942bea72ed827e68b679095070892.mesh"
+
+[deps]
+
+files=["res://.godot/imported/TreeCrown2Snow.obj-36c942bea72ed827e68b679095070892.mesh"]
+
+source_file="res://res/lib/ColdBiom/Crowns/TreeCrown2Snow.obj"
+dest_files=["res://.godot/imported/TreeCrown2Snow.obj-36c942bea72ed827e68b679095070892.mesh", "res://.godot/imported/TreeCrown2Snow.obj-36c942bea72ed827e68b679095070892.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(0.1, 0.1, 0.1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

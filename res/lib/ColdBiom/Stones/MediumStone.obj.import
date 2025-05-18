@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d2tl3sdb4vmtk"
+path="res://.godot/imported/MediumStone.obj-8d5560c57a29d6c801e1e7f8d5bf3be9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/MediumStone.obj-8d5560c57a29d6c801e1e7f8d5bf3be9.mesh"]
+
+source_file="res://res/lib/ColdBiom/Stones/MediumStone.obj"
+dest_files=["res://.godot/imported/MediumStone.obj-8d5560c57a29d6c801e1e7f8d5bf3be9.mesh", "res://.godot/imported/MediumStone.obj-8d5560c57a29d6c801e1e7f8d5bf3be9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://nxckla857s48"
+path="res://.godot/imported/AliveBush.obj-7aa11f7e711949ac73a7f521cc4d78e5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/AliveBush.obj-7aa11f7e711949ac73a7f521cc4d78e5.mesh"]
+
+source_file="res://res/lib/ColdBiom/Bushes/AliveBush.obj"
+dest_files=["res://.godot/imported/AliveBush.obj-7aa11f7e711949ac73a7f521cc4d78e5.mesh", "res://.godot/imported/AliveBush.obj-7aa11f7e711949ac73a7f521cc4d78e5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -2,12 +2,11 @@
 
 [ext_resource type="Script" path="res://src/states/state_machine.gd" id="1_t2lyj"]
 [ext_resource type="Script" path="res://src/states/loading.gd" id="2_g37j7"]
-[ext_resource type="PackedScene" uid="uid://b5okkk0ofmq8e" path="res://scn/game_world.tscn" id="3_ofiky"]
+[ext_resource type="PackedScene" uid="uid://b5okkk0ofmq8e" path="res://scn/GameWorld.tscn" id="3_ofiky"]
 
 [node name="GameManager" type="Node"]
 
 [node name="StateMachine" type="Node" parent="."]
-unique_name_in_owner = true
 script = ExtResource("1_t2lyj")
 
 [node name="Loading" type="Node" parent="StateMachine"]

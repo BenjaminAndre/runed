@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c7qbxf77al1em"
+path="res://.godot/imported/DecoratedStone2.obj-ab826905ea3f087fc0ab99e878298f17.mesh"
+
+[deps]
+
+files=["res://.godot/imported/DecoratedStone2.obj-ab826905ea3f087fc0ab99e878298f17.mesh"]
+
+source_file="res://res/lib/ColdBiom/Stones/DecoratedStone2.obj"
+dest_files=["res://.godot/imported/DecoratedStone2.obj-ab826905ea3f087fc0ab99e878298f17.mesh", "res://.godot/imported/DecoratedStone2.obj-ab826905ea3f087fc0ab99e878298f17.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(0.2, 0.2, 0.2)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

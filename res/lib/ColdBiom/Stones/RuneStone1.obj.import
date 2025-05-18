@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c8ifhqp1hr3qq"
+path="res://.godot/imported/RuneStone1.obj-ec58375b2e124004084d413ef083c741.mesh"
+
+[deps]
+
+files=["res://.godot/imported/RuneStone1.obj-ec58375b2e124004084d413ef083c741.mesh"]
+
+source_file="res://res/lib/ColdBiom/Stones/RuneStone1.obj"
+dest_files=["res://.godot/imported/RuneStone1.obj-ec58375b2e124004084d413ef083c741.mesh", "res://.godot/imported/RuneStone1.obj-ec58375b2e124004084d413ef083c741.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(0.2, 0.2, 0.2)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
