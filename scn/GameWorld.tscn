@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b5okkk0ofmq8e"]
+[gd_scene load_steps=17 format=3 uid="uid://b5okkk0ofmq8e"]
 
 [ext_resource type="PackedScene" uid="uid://b7cuxughbbbg2" path="res://res/ext/island.blend" id="1_owfvh"]
 [ext_resource type="ArrayMesh" uid="uid://lau7klpfl1cm" path="res://res/lib/ColdBiom/Crowns/TreeCrown2.obj" id="2_jqr7x"]
@@ -13,6 +13,10 @@
 [ext_resource type="ArrayMesh" uid="uid://bddow83otolok" path="res://res/lib/ColdBiom/Stones/RuneStone4.obj" id="11_451nt"]
 [ext_resource type="ArrayMesh" uid="uid://82vs22222tv6" path="res://res/lib/ColdBiom/Stones/RuneStone3.obj" id="12_aul76"]
 [ext_resource type="ArrayMesh" uid="uid://dvambxr17grw0" path="res://res/lib/ColdBiom/Snowman/Snowman.obj" id="13_1thdc"]
+[ext_resource type="Script" path="res://src/card_manager.gd" id="14_0occj"]
+[ext_resource type="PackedScene" uid="uid://cff2sa0folu5" path="res://scn/Card.tscn" id="14_nw6ok"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1ofrx"]
 
 [node name="GameWorld" type="Node3D"]
 
@@ -103,3 +107,26 @@ skeleton = NodePath("../..")
 transform = Transform3D(-0.677582, 0, -0.735447, 0, 1, 0, 0.735447, 0, -0.677582, 4.30021, 0, 2.84896)
 mesh = ExtResource("13_1thdc")
 skeleton = NodePath("../..")
+
+[node name="CardManager" type="Node3D" parent="."]
+script = ExtResource("14_0occj")
+
+[node name="Area3D" type="Area3D" parent="CardManager"]
+collision_layer = 4
+
+[node name="WorldPlane" type="CollisionShape3D" parent="CardManager/Area3D"]
+shape = SubResource("WorldBoundaryShape3D_1ofrx")
+
+[node name="Card2" parent="CardManager" instance=ExtResource("14_nw6ok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.87655, 0, 0)
+
+[node name="Card" parent="CardManager" instance=ExtResource("14_nw6ok")]
+
+[node name="Card3" parent="CardManager" instance=ExtResource("14_nw6ok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.38718)
+
+[node name="Card4" parent="CardManager" instance=ExtResource("14_nw6ok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.30485)
+
+[node name="Card5" parent="CardManager" instance=ExtResource("14_nw6ok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.19577, 0, 0)

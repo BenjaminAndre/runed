@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://cff2sa0folu5"]
+
+[ext_resource type="Texture2D" uid="uid://degqq1vuqfxu4" path="res://res/cards/front_face.png" id="1_0w7w6"]
+[ext_resource type="Script" path="res://src/card.gd" id="1_17pou"]
+[ext_resource type="Script" path="res://src/sprites_effects.gd" id="2_momru"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v7saw"]
+size = Vector3(0.701267, 1, 1.00152)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5adb3"]
+size = Vector3(0.594666, 0.511719, 0.849487)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ju8u5"]
+size = Vector3(0.553123, 0.0871887, 0.822548)
+
+[node name="Card" type="Node3D" node_paths=PackedStringArray("stacking_anchor", "magnetic_zone")]
+script = ExtResource("1_17pou")
+stacking_anchor = NodePath("StackingAnchor")
+magnetic_zone = NodePath("StackingMagnet")
+
+[node name="Sprites" type="Node3D" parent="." node_paths=PackedStringArray("detection_zone")]
+script = ExtResource("2_momru")
+rotation_to_mouse = Vector3(8, 0, 16)
+detection_zone = NodePath("CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprites"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00153929, 0, 0.00302368)
+shape = SubResource("BoxShape3D_v7saw")
+
+[node name="FrontFace" type="Sprite3D" parent="Sprites"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.1, 0)
+axis = 1
+texture = ExtResource("1_0w7w6")
+
+[node name="StackingMagnet" type="Area3D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StackingMagnet"]
+transform = Transform3D(0.999999, 0.000367715, -0.000949831, -0.000365597, 0.999997, 0.00220912, 0.000950648, -0.00220877, 0.999997, -0.000575981, -0.0888688, 0.0463227)
+shape = SubResource("BoxShape3D_5adb3")
+
+[node name="StackingAnchor" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0.191)
+
+[node name="PickupZone" type="Area3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PickupZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00323868, 0.0610504, -0.0311241)
+shape = SubResource("BoxShape3D_ju8u5")
